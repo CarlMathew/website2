@@ -2,12 +2,694 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href = "../static/style.css" rel = "stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Gloria+Hallelujah&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+  <style>
+    body{
+      background-color: #FAF3F0;
+      margin: 0;
+      padding: 0;
+    }
+    .container1{
+      height: 1100px;
+      width: 1515px;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-rows: 600px 500px 1300px 1300px 300px;
+      gap: 50px;
+    }
+    /* .box1, .box2{
+      background-color: red;
+    } */
+    .box1{
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex:1;
+    }
+    .background1{
+      width: 1000px;
+      height: 100%;
+      background-color: beige;
+      background-image: url("../static/bg1.svg");
+      background-size: cover;
+    }
+    .carousel1{
+      width: 515px;
+      height: 100%;
+      height: 100%;
+    }
+    .box2{
+      display:flex;
+      align-items:center;
+      justify-content:space-evenly;
+      
+    }
+    .artist{
+      background-color:#F1EFEF;
+      height:100%;
+      width: 350px;
+      display:grid;
+      grid-template-rows: 200px 280px;
+      gap: 10px;
+      border-radius: 5%;
+      box-shadow: 3px 5px 5px #352F44 inset;
+    }
+    .pic1{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .desc1{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 80px 200px;
+      border: 0px solid wheat;
+      border-width: 2px 0px 0px 0px;
+    }
+    .name1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bx1{
+      background-color: wheat;
+      width:120px;
+      height:30px;
+      text-align:center;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 15pt;
+      border-radius: 5%;
+      box-shadow: 10px 10px 3px black;
+    }
+    
+    .carl{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #F1F0E8;
+      background-image: url("../static/faces/face1.svg");
+      box-shadow: 10px 10px 3px wheat;
+      transition: transform 0.5s ease-in-out 0.5s, background-image 0.5s ease-in-out 0.5s;
+    }
+    .carl:hover{
+      transform: translateY(-10px);
+      background-image: url("../static/skills/web.svg");
+    }
+    .desc2{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 80px 200px;
+      border: 0px solid #9D76C1;
+      border-width: 2px 0px 0px 0px;
+    }
+    .name2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bx2{
+      background-color: #9D76C1;
+      width:120px;
+      height:30px;
+      text-align:center;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 15pt;
+      border-radius: 5%;
+      box-shadow: 10px 10px 3px black;
+    }
+    .pic2{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .natalie{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #F1F0E8;
+      background-image: url("../static/faces/face2.svg");
+      box-shadow: 10px 10px 3px #DFCCFB;
+      transition: transform 0.5s ease-in-out 0.5s, background-image 0.5s ease-in-out 0.5s;
+    }
+    .natalie:hover{
+      transform: translateY(-10px);
+      background-image: url("../static/skills/graphic.svg")
+    }
+    .desc3{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 80px 200px;
+      border: 0px solid #FBF0B2;
+      border-width: 2px 0px 0px 0px;
+    }
+    .name3{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bx3{
+      background-color: #FBF0B2;
+      width:120px;
+      height:30px;
+      text-align:center;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 15pt;
+      border-radius: 5%;
+      box-shadow: 10px 10px 3px black;
+    }    
+    .pic3{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .arthur{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #F1F0E8;
+      background-image: url("../static/faces/face3.svg");
+      box-shadow: 10px 10px 3px #F6FFA6;
+      transition: transform 0.5s ease-in-out 0.5s, background-image 0.5s ease-in-out 0.5s;
+    }
+    .arthur:hover{
+      transform: translateY(-10px);
+      background-image: url("../static/skills/photo.svg");
+    }
+    .desc4{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 80px 200px;
+      border: 0px solid #FFB6D9;
+      border-width: 2px 0px 0px 0px;
+    }
+    .name4{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bx4{
+      background-color: #FFB6D9;
+      width:120px;
+      height:30px;
+      text-align:center;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 15pt;
+      border-radius: 5%;
+      box-shadow: 10px 10px 3px black;
+    }
+    .pic4{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .sasha{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #F1F0E8;
+      background-image: url("../static/faces/face4.svg");
+      box-shadow: 10px 10px 3px #FF9B9B;
+      transition: transform 0.5s ease-in-out 0.5s, background-image 0.5s ease-in-out 0.5s
+    }
+    .sasha:hover{
+      transform:translateY(-10px);
+      background-image: url("../static/skills/music.svg");
+    }
+    .box3{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 100px repeat(4, 300px);
+      gap: 50px;
+    }
+    .header{
+      width:100%;
+      display:flex;
+      align-items: center;
+    }
+    .work1, .work2, .work3, .work4{
+      width: 100%;
+     
+      display: flex;
+    }
+    .work1{
+      background-color: wheat;
+      justify-content: flex-start;
+      gap: 20px;
+      box-shadow: 15px 25px 5px #CCC8AA;
+    }
+    .p1{
+      
+      width: 300px;
+      height: 100%;
+    }
+    .d1{
+     
+      width: 800px;
+      height: 100%;
+    }
+    .work2{
+      background-color: #E5CFF7;
+      justify-content: flex-end;
+      gap: 20px;
+      box-shadow: -15px 25px 5px #CCC8AA;
+    }
+    .p2{
+ 
+      width: 300px;
+      height: 100%;
+    }
+    .d2{
+      width: 800px;
+      height: 100%;
+    }
+    .work3{
+      background-color: #FAF2D3;
+      justify-content: flex-start;
+      gap: 20px;
+      box-shadow: -15px 25px 5px #CCC8AA;
+    }
+    .p3{
+     
+      width: 300px;
+      height: 100%;
+    }
+    .d3{
+      width: 800px;
+      height: 100%;
+    }
+    .work4{
+      background-color: #FFC7EA;
+      justify-content: flex-end;
+      gap: 20px;
+      box-shadow: 15px 25px 5px #CCC8AA;
+    }
+    .p4{
+      width: 300px;
+      height: 100%;
+    }
+    .d4{
+      width: 800px;
+      height: 100%;
+    }
+    .box4{
+      position:relative;
+      width: 100%;
+      top: 175px;
+      display:grid;
+      grid-auto-rows: 100px 1200px;
+    }
+    .list1{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+    .content{
+      position:relative;
+      width: 1200px;
+      height: 1100px;
+      display: grid;
+      grid-template-rows: repeat(4, 200px 300px);
+      gap: 80px;
+      
+    }
+    .mytitle1{
+      width: 100%;
+
+    }
+    .mylist1{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+    .myone{
+      position:relative;
+      height 100%;
+      width: 300px;
+      bottom: 80px;
+    }
+    .box5{
+      width: 100%;
+      position:relative;
+      top:1700px;
+      display: flex;
+      align-items:center;
+      justify-content: space-evenly;
+    }
+    
+
+    
+  </style>
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello Carl</h1>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<div class = "container1">
+  <div class = "box1"> 
+    <div class = "background1"></div>
+    <div class = "carousel1"><div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/caro/caro1.svg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/caro/caro2.svg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/caro/caro3.svg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
+  </div>
+
+  <div class = "box2"> 
+    <div class = "artist art1">
+      <div class = "pic1"> 
+        <div class = "carl">
+        </div> 
+      </div>
+      <div class = "desc1">
+        <div class = "name1"><div class = "bx1">Carlito</div></div>
+        <div class = "define1" style="text-align: center; font-family: 'Shadows Into Light', cursive; font-size: 15pt;">With an artistic flair and a keen eye for detail, he crafts visually stunning and user-friendly websites that leave clients in awe. His designs seamlessly blend form and function, making him the go-to guru for digital aesthetics and user experience. 🌐✨ </div>
+      </div>
+    
+    </div>
+    <div class = "artist art2">
+    <div class = "pic2"> 
+        <div class = "natalie">
+          
+        </div> 
+      </div>
+      <div class = "desc2">
+        <div class = "name2"><div class = "bx2">Natalie</div></div>
+        <div class = "define1" style="text-align: center; font-family: 'Shadows Into Light', cursive; font-size: 15pt;">Her creations not only capture the essence of her clients' visions but also infuse them with a touch of magic. Whether it's a logo, an advertisement, or an entire brand identity, Natalie's work radiates creativity and imagination, leaving a lasting impression on all who see it. 🌟🖌️ </div>
+      </div>
+    </div>
+    <div class = "artist art3">
+       <div class = "pic3"> 
+        <div class = "arthur">
+        </div> 
+      </div>
+      <div class = "desc3"> 
+        <div class = "name3"><div class = "bx3">Arthur</div></div>
+        <div class = "define1" style="text-align: center; font-family: 'Shadows Into Light', cursive; font-size: 15pt;">His lens transforms ordinary scenes into extraordinary works of art. Whether it's a bustling city street or a tranquil forest, Arthur's photos evoke emotions and tell captivating stories, reminding us of the magic that surrounds us daily. 🌆🌿</div>
+      </div>
+    </div>
+    <div class = "artist art4">
+      <div class = "pic4"> 
+        <div class = "sasha">
+        </div> 
+      </div>
+      <div class = "desc4">
+      <div class = "name4"><div class = "bx4">Sasha</div></div>
+        <div class = "define1" style="text-align: center; font-family: 'Shadows Into Light', cursive; font-size: 15pt;">Each note and harmony that flows from Arthur's mind has the power to stir hearts, paint vivid imagery, and create unforgettable soundscapes, making every piece of music an enchanting journey of the soul. 🌌🎵</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "box3"> 
+  <div class = "header" style = "font-family: 'Fjalla One', sans-serif; font-weight: 600; font-size: 40px; padding-left: 20px;">Discover their arts.</div>
+  <div class = "work1">
+    <div class = "p1" style = "background-image: url('../static/skills/web1.svg')"></div>
+    <div class = "d1" style = "background-image: url('../static/skills/desc1.svg')"></div>
+  </div>
+  <div class = "work2">
+    <div class = "d2" style = "background-image: url('../static/skills/desc2.svg')"></div>
+    <div class = "p2" style = "background-image: url('../static/skills/graphic1.svg')"></div>
+  </div>
+  <div class = "work3">
+    <div class = "p3" style = "background-image: url('../static/skills/photo1.svg')"></div>
+    <div class = "d3" style = "background-image: url('../static/skills/desc3.svg')"></div>
+  </div>
+  <div class = "work4">
+    <div class = "d4" style = "background-image: url('../static/skills/desc4.svg')"></div>
+    <div class = "p4" style = "background-image: url('../static/skills/music1.svg')"></div>
+  </div>
+  
+  </div>
+
+  <div class = "box4"> 
+    <div style = "font-family: 'Fjalla One', sans-serif; font-weight: 600; font-size: 40px; padding-left: 20px; padding-top: 50px;"> Learn From Master's </div>
+    <div class = "list1">
+      <div class = "content">
+
+        <div class = "mytitle1">
+          <div class="card text-center">
+          <div class="card-header">
+                Learn #1
+          </div>
+          <div class="card-body" style= "background-color: wheat">
+            <h5 class="card-title">Web Design</h5>
+            <p class="card-text" style = "font-family: 'Shadows Into Light'; font-size: 15pt;">Designing Tomorrow's Digital World Today.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+</div>
+        
+        </div>
+        <div class = "mylist1">
+          <div class = "myone">
+            <div class="card" style="width: 18rem;">
+            <img src="../static/vid/web1.svg" class="card-img-top" alt="..." width = "100px">
+            <div class="card-body">
+            <p class="card-text">Beginner-friendly HTML tutorial: Master the basics of web development with easy-to-follow lessons.</p>
+            </div>
+          </div>
+          
+          </div>
+          <div class = "myone">
+           <div class="card" style="width: 18rem;">
+            <img src="../static/vid/web2.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">CSS tutorial: Elevate your web design skills with essential styling techniques and best practices. Learn Now!</p>
+            </div>
+          </div>
+          </div>
+          <div class = "myone">
+           <div class="card" style="width: 18rem;">
+            <img src="../static/vid/web3.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">JavaScript tutorial: Unlock dynamic web interactivity through coding with this comprehensive, beginner-friendly guide.</p>
+            </div>
+          </div>
+          </div>
+          <div class = "myone">
+           <div class="card" style="width: 18rem;">
+            <img src="../static/vid/web4.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">PHP tutorial: Learn server-side scripting for web development with hands-on, beginner-friendly lessons..</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class = "mytitle1"><div class="card text-center">
+          <div class="card-header">
+                Learn #2
+          </div>
+          <div class="card-body" style= "background-color:  #9D76C1">
+            <h5 class="card-title">Graphic Design</h5>
+            <p class="card-text" style = "font-family: 'Shadows Into Light'; font-size: 15pt;">Elevate Brands, Inspire Minds: Graphic Design Excellence.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+</div> </div>
+        <div class = "mylist1">
+          <div class = "myone">
+            <div class="card" style="width: 18rem;">
+  <img src="../static/vid/graph1.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Unlock your creative potential with this hands-on tutorial exploring imagination and innovation.</p>
+  </div>
+</div>
+          
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/graph2.svg" class="card-img-top" alt="...">
+  <div class="card-body" >
+    <p class="card-text">Typography tutorial: Master the art of fonts and text design for impactful communication..</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/graph3.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Brand building tutorial: Craft a strong brand identity and create lasting connections.</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/graph4.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Adobe Creative Tools tutorial: Harness the power of Adobe's creative software suite.</p>
+  </div>
+</div>
+          
+          </div>
+        </div>
+        <div class = "mytitle1">
+        <div class="card text-center">
+  <div class="card-header">
+    Learn #3
+  </div>
+  <div class="card-body" style= "background-color: #FBF0B2">
+    <h5 class="card-title">Photography</h5>
+    <p class="card-text" style = "font-family: 'Shadows Into Light'; font-size: 15pt;">Capturing Moments, Creating Memories.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+
+</div>
+        </div>
+        <div class = "mylist1"> 
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/photo1.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Attention to detail tutorial: Develop precision and thoroughness for improved outcomes and quality. Enroll Now!</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/photo2.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Photography skills tutorial: Enhance your visual storytelling with expert guidance and practical exercises. Learn Now!</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/photo3.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Composition skills tutorial: Elevate your creative work through effective visual arrangement techniques.</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="./static/vid/photo4.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Photo editing tutorial: Transform your images with professional editing techniques and creative enhancements.</p>
+  </div>
+</div>
+          </div>
+        </div>
+        <div class = "mytitle1">
+        <div class="card text-center">
+  <div class="card-header">
+    Learn #4
+  </div>
+  <div class="card-body" style= "background-color: #FFB6D9">
+    <h5 class="card-title">Music Production</h5>
+    <p class="card-text" style = "font-family: 'Shadows Into Light'; font-size: 15pt;">Harmonizing Hearts, One Note at a Time.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+
+</div>
+        </div>
+        <div class = "mylist1">
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/music1.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Music theory tutorial: Uncover the secrets of harmony, melody, and rhythm in music.</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/music2.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Vocal exercise: Strengthen and refine your singing abilities with targeted vocal training techniques.</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/music3.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Sheet reading: Master the skill of interpreting music notation for precise musical performance..</p>
+  </div>
+</div>
+          </div>
+          <div class = "myone">
+          <div class="card" style="width: 18rem;">
+  <img src="../static/vid/music4.svg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Writing lyrics: Craft meaningful songs with expert guidance on storytelling through words.</p>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "box5">
+    <div class = "heading"> </div>
+    {% for con in contact %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body" style = "background-color: #F5F5F5">
+    <h3 class="border-bottom" style = "font-family: 'Fjalla One'; font-size: 20pt;">{{con["Name"]}} </h3>
+    <p class="card-text">
+      <b>Profession </b>: {{con["Profession"]}} </br>
+      <b>Years of Experience</b>: {{con["Years of Experience"]}} </br>
+      <b>Contact Number</b>: {{con["Contact Number"]}} </br>
+      <b>Email</b>: {{con["Email"]}}
+    </p>
+    <a href="#" class="btn btn-primary">Contact Me!</a>
+  </div>
+</div>
+    {% endfor %}
+  
+  </div> 
+  
+  
+</div>
+  <div class = "header" style = "font-family: 'Fjalla One', sans-serif; font-weight: 600; font-size: 40px; padding-left: 20px; position:absolute; top: 5580px">Customer Support</div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  
 </body>
 </html>
